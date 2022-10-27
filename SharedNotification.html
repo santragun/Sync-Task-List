@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+  <?!= include('stylesheet'); ?>
+</head>
+
+<body>
+  <div class="topnav">
+    <p style="font-family : verdana; font-size : 14px;color:black;">Hello, I have Shared you this Task List to collaborate. Install <a href="https://workspace.google.com/marketplace">Sync Task List</a> from Google workspace and accept or reject the task list from the addon.
+    </p>
+  </div>
+  
+  <div id="main">
+    <table>
+      <thead>
+        <tr id="response-name" class="title">
+          <th colspan="4"><?=taskList?></th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <? for (let i = 0; i < tasks.length; i++) { ?>
+        <tr>
+          <td style="color:black;">
+            <?= i + 1 ?>
+          </td>
+          <td style="color:black;" colspan="3">
+            <?= tasks[i] ?>
+          </td>
+        </tr>
+        <? } ?>
+
+      </tbody>
+    </table>
+</body>
+
+</html>
